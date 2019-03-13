@@ -1,1 +1,1 @@
-../src/index.js
+../build/lazy-image-loader.min.js

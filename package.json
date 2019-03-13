@@ -2,8 +2,9 @@
   "name": "lazy-image-loader",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "build": "npx uglifyjs --mangle --compress --output build/lazy-image-loader.min.js src/index.js && cp src/index.js build/lazy-image-loader.js && echo Build successful.",
     "test": "Echo Starting test server...; npx serve ./test"
   },
   "repository": {
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/dhruvio/js_lazy-image-loader#readme",
   "devDependencies": {
-    "serve": "^10.1.2"
+    "serve": "^10.1.2",
+    "uglify-js": "^3.4.9"
   }
 }

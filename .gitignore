@@ -2,8 +2,5 @@
 *.tmp
 *.pem
 *.map
-.env
 node_modules/
 tmp/
-build/
-
