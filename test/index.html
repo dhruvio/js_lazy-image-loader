@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>Lazy Image Loader Test</title>
+    <script src="/lazy-image-loader.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 100vw;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+      section, img {
+        width: 100%;
+      }
+      section {
+        margin-bottom: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <img src="/placeholder.jpg" alt="This is an image" data-lil-image-set="https://media0.giphy.com/media/gxxlowyvtfS0M/giphy.gif?cid=3640f6095c88232d653676746f2502a6 2x 400px, https://media1.giphy.com/media/BLeTkfK6TbjTa/giphy.gif?cid=3640f6095c882336547763762e3b2e88 2x 800px" data-lil-fallback-src="https://media1.giphy.com/media/HSvpy6Jk396SI/giphy.gif?cid=3640f6095c8840d57671526845574ccf" />
+    </section>
+    <section>
+      <img src="/placeholder.jpg" alt="This is an image" data-lil-image-set="https://media0.giphy.com/media/gxxlowyvtfS0M/giphy.gif?cid=3640f6095c88232d653676746f2502a6 1x 400px, https://media1.giphy.com/media/BLeTkfK6TbjTa/giphy.gif?cid=3640f6095c882336547763762e3b2e88 1x 1600px" />
+    </section>
+    <section>
+      <img src="/placeholder.jpg" alt="This is an image" data-lil-image-set="https://media0.giphy.com/media/gxxlowyvtfS0M/giphy.gif?cid=3640f6095c88232d653676746f2502a6 1x 400px, https://media1.giphy.com/media/BLeTkfK6TbjTa/giphy.gif?cid=3640f6095c882336547763762e3b2e88 2x 800px" data-lil-fallback-src="https://media1.giphy.com/media/HSvpy6Jk396SI/giphy.gif?cid=3640f6095c8840d57671526845574ccf" />
+    </section>
+    <section>
+      <img src="/placeholder.jpg" alt="This is an image" data-lil-image-set="https://media0.giphy.com/media/gxxlowyvtfS0M/giphy.gif?cid=3640f6095c88232d653676746f2502a6 2x 400px, https://media1.giphy.com/media/BLeTkfK6TbjTa/giphy.gif?cid=3640f6095c882336547763762e3b2e88 2x 1600px" />
+    </section>
+    <script>
+      lazyImageLoader();
+    </script>
+  </body>
+</html>

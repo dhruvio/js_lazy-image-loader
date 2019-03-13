@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "Echo Starting test server...; npx serve ./test"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dhruvio/js_lazy-image-loader/issues"
   },
-  "homepage": "https://github.com/dhruvio/js_lazy-image-loader#readme"
+  "homepage": "https://github.com/dhruvio/js_lazy-image-loader#readme",
+  "devDependencies": {
+    "serve": "^10.1.2"
+  }
 }
