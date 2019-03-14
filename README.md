@@ -21,7 +21,7 @@ The code snippet below shows you how this library can be used in practice:
 ```html
 <!-- inside the body tag -->
 <!-- configure and img tag with the correct data attributes -->
-<img src="/placeholder.jpg" data-lil-image-set="/mobile-image.jpg 2x 480px, /laptop-image.jpg 2x 1400px" data-lil-fallback-src="/desktop-image.jpg" />
+<img src="/placeholder.jpg" data-lil-image-set="/mobile-image.jpg 2x 480px, /tablet-image.jpg 2x 1100px, /laptop-image.jpg 2x 1440px" data-lil-fallback-src="/desktop-image.jpg" />
 <!-- load the Lazy Image Loader library -->
 <script src="/path/to/lazy-image-loader.min.js"></script>
 <!-- start the Lazy Image Loader -->
