@@ -6,11 +6,20 @@
   var SPLIT_REGEXP = /\s*,+\s*/;
   var IMAGE_SET_REGEXP = /^\s*(.+)\s+(\d+)x\s+(\d+)px\s*$/i;
 
+  function getTop(node, acc) {
+    acc += node.offsetTop;
+    var parent = node.offsetParent;
+    if (!parent || parent === document.body) return acc;
+    var parentTop = parent.offsetTop;
+    if (parentTop === document.body.offsetTop) return acc;
+    return acc + getTop(node);
+  }
+
   // Helper function to determine if an element is visible on the page.
   function isVisible(node) {
     var topOfViewport = window.scrollY;
     var bottomOfViewport = topOfViewport + window.innerHeight;
-    var topOfNode = node.offsetTop;
+    var topOfNode = getTop(node, 0);
     var bottomOfNode = topOfNode + node.offsetHeight;
     var topIsVisible = topOfNode >= topOfViewport && topOfNode <= bottomOfViewport;
     var bottomIsVisible = bottomOfNode >= topOfViewport && bottomOfNode <= bottomOfViewport;
