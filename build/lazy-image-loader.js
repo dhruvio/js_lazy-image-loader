@@ -12,7 +12,7 @@
     if (!parent || parent === document.body) return acc;
     var parentTop = parent.offsetTop;
     if (parentTop === document.body.offsetTop) return acc;
-    return acc + getTop(parent);
+    return getTop(parent, acc);
   }
 
   // Helper function to determine if an element is visible on the page.
